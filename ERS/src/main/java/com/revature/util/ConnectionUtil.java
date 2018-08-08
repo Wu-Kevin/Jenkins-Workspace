@@ -25,7 +25,7 @@ public final class ConnectionUtil {
 
 		try {
 			Properties props = new Properties();
-			in = new FileInputStream("C:/Workspace/ERS/src/main/resources/connection.properties");
+			in = new FileInputStream("../ERS/src/main/resources/connection.properties");
 			props.load(in);
 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
