@@ -60,7 +60,7 @@ function refreshPendingTable() {
 function logOut() {
 	if (window.confirm("Are you sure you want to logout?")) {
 		sessionStorage.clear();
-		window.location.href = "http://localhost:8181/ERS/html/login.html";
+		window.location.href = "/ERS/html/login.html";
 	} else {
 		return;
 	}
@@ -76,7 +76,7 @@ function getEmployee() {
 		;
 	};
 	xhttp
-			.open("POST", "http://localhost:8181/ERS/html/listEmployee.ajax",
+			.open("POST", "/ERS/html/listEmployee.ajax",
 					true);
 	xhttp.send();
 	let x = document.getElementById("listEmployee");
@@ -92,7 +92,7 @@ function getAllEmployees() {
 		}
 		;
 	};
-	xhttp.open("POST", "http://localhost:8181/ERS/html/listAllEmployees.ajax",
+	xhttp.open("POST", "/ERS/html/listAllEmployees.ajax",
 			true);
 	xhttp.send();
 	let x = document.getElementById("listAllEmployees");
@@ -182,7 +182,7 @@ function getReimbursements() {
 		}
 	}
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/listReimbursements.ajax", true);
+			"/ERS/html/listReimbursements.ajax", true);
 	xhttp.send();
 	let newx = document.getElementById("showReim");
 	newx.style.display = "none";
@@ -202,7 +202,7 @@ function insertReimbursement() {
 		}
 	};
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/insertReimbursement.ajax?amt="
+			"/ERS/html/insertReimbursement.ajax?amt="
 					+ amt + "&rat=" + rat, true);
 	xhttp.send();
 }
@@ -217,7 +217,7 @@ function showReimById() {
 		}
 	}
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/selectReimbursementById.ajax?reimid="
+			"/ERS/html/selectReimbursementById.ajax?reimid="
 					+ reimid, true);
 	xhttp.send();
 }
@@ -320,7 +320,7 @@ function getAllPendingReimbursements() {
 		}
 	}
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/listAllReimbursements.ajax", true);
+			"/ERS/html/listAllReimbursements.ajax", true);
 	xhttp.send();
 	let newx = document.getElementById("showReimPending");
 	newx.style.display = "none";
@@ -340,7 +340,7 @@ function changeReimbursements() {
 	// }
 	// }
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/changeReimbursements.ajax?changeid="
+			"/ERS/html/changeReimbursements.ajax?changeid="
 					+ changeid + "&approval=" + approval, true);
 	xhttp.send();
 }
@@ -354,7 +354,7 @@ function getAllApprovedReimbursements() {
 		}
 	}
 	xhttp.open("POST",
-			"http://localhost:8181/ERS/html/listAllReimbursements.ajax", true);
+			"/ERS/html/listAllReimbursements.ajax", true);
 	xhttp.send();
 	let newx = document.getElementById("showReimApproved");
 	newx.style.display = "none";

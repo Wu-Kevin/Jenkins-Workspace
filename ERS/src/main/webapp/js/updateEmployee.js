@@ -7,7 +7,7 @@ function changeFN() {
 			updateFN(ajaxObject);
 		};
 	};
-	xhttp.open("POST", "http://localhost:8181/ERS/html/updateEmployeeFN.ajax?FN="+FN, true);
+	xhttp.open("POST", "/ERS/html/updateEmployeeFN.ajax?FN="+FN, true);
 	xhttp.send();
 	let x = document.getElementById("FNdiv");
     x.style.display = "none";
@@ -22,7 +22,7 @@ function changeLN() {
 			updateLN(ajaxObject);
 		};
 	};
-	xhttp.open("POST", "http://localhost:8181/ERS/html/updateEmployeeLN.ajax?LN="+LN, true);
+	xhttp.open("POST", "/ERS/html/updateEmployeeLN.ajax?LN="+LN, true);
 	xhttp.send();
     let x = document.getElementById("LNdiv");
     x.style.display = "none";
@@ -37,7 +37,7 @@ function changeEM() {
 			updateEM(ajaxObject);
 		};
 	};
-	xhttp.open("POST", "http://localhost:8181/ERS/html/updateEmployeeEM.ajax?EM="+EM, true);
+	xhttp.open("POST", "/ERS/html/updateEmployeeEM.ajax?EM="+EM, true);
 	xhttp.send();
     let x = document.getElementById("EMdiv");
     x.style.display = "none";
@@ -52,7 +52,7 @@ function changePW() {
 			updatePW(ajaxObject);
 		};
 	};
-	xhttp.open("POST", "http://localhost:8181/ERS/html/updateEmployeePW.ajax?PW="+PW, true);
+	xhttp.open("POST", "/ERS/html/updateEmployeePW.ajax?PW="+PW, true);
 	xhttp.send();
     let x = document.getElementById("PWdiv");
     x.style.display = "none";
